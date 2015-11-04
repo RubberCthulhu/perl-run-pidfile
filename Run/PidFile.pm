@@ -15,7 +15,7 @@ sub new {
     ${*$self}{Path} = $path;
     ${*$self}{Nonblock} = $opt{Nonblock} // 0;
 
-    return $self->lock if $opt{Lock};
+    return $self->open if $opt{Open};
 
     return $self;
 }
